@@ -1,5 +1,7 @@
 <?php
 
+//Given arrays 
+
 $productsArray = [
     [ 'productName' => 'Shirt', 'productPrice' => 50 ],
     [ 'productName' => 'Pants', 'productPrice' => 100 ],
@@ -13,15 +15,15 @@ $discountArray = [
 ];
 
 
-
+//Trying to filter each default array into new array by the product name; i.e. instead of [productName] => 'Shirt' we have [0] => 'Shirt' 
 $newProducts = array_column($productsArray, 'productName');
 $newDiscount = array_column($discountArray, 'productName');
 
 
-foreach ($newDiscount as $key => $productName) {
+foreach ($newDiscount as $key => $productName) {                       //count through newDiscount array 
 
 
-    if (in_array($productName, $newProducts, true)) {
+    if (in_array($productName, $newProducts, true)) {                  //here in $productName values 'Shirt' and 'Pants' are stored which are taken from newDiscount array, but we check newProduct array
         echo "discount should be applied<br>";
     }
 
