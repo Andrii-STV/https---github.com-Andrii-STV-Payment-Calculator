@@ -38,6 +38,17 @@ function testPrint($item, $key) {
 }
 
 
+
+$productName = 'productName';
+
+foreach ($poductsArray as $product) {
+    if ($product[$productName] === $newDiscount)
+}
+
+
+
+
+
 array_walk_recursive($productsArray, 'testPrint');
 
 
