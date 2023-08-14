@@ -17,7 +17,7 @@ $discountArray = [
 
 //Trying to filter each default array into new array by the product name; i.e. instead of [productName] => 'Shirt' we have [0] => 'Shirt' 
 $newProducts = array_column($productsArray, 'productName');
-$newDiscount = array_column($discountArray, 'productName');
+$newDiscount = array_column($discountArray, 'productName', 'productName');
 
 
 
@@ -41,9 +41,12 @@ function testPrint($item, $key) {
 
 $productName = 'productName';
 
+/*
 foreach ($poductsArray as $product) {
     if ($product[$productName] === $newDiscount)
 }
+
+*/
 
 
 
